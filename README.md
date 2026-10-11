@@ -7,6 +7,11 @@ Seminar *Concepts in Machine Learning*, Ulm University, 2026 — Milan Tóth
 
 ![Forward noising process](images/noising_steps_plain.png)
 
+**Forward process:** Gaussian noise is added to an image step by step with the linear DDPM schedule (T = 1000), until only noise remains.
+
+![Denoising process](images/figure_reverse_process_18000steps.png)
+
+**Reverse process:** a small DDPM trained on this single image for 18,000 steps starts from pure noise and recovers the image.
 ## Code
 
 The scripts in `src/` produce the figures used in the paper and slides. All inputs are read from `images/` and all outputs are written there.
